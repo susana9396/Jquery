@@ -9,9 +9,10 @@
         #cont{
             margin:50px;
             padding: 20px;
-            width: 500px;
+            width: 700px;
             border-style: solid;
             border-color: black;
+          
         }
         .red {
             color: red;
@@ -46,6 +47,72 @@
             <p id="pred3">Al presionar el boton agregar un nuevo parrafo</p>
             <button id="btn-append">Boton</button>
         </div>
+        <h1>toggle</h1>
+        <div>
+            <p id="pred4">Al presionar el boton se esconde parrafo</p>
+            <button id="btn-toggle">Boton</button>
+        </div>
+        <hr>
+        <h1>slideDown</h1>
+        <div>
+            <p id="pred5">pendiente</p>
+            <button id="btn-slided">Boton</button>
+        </div>
+        <hr>
+        <h1>slideUp</h1>
+        <div>
+            <p id="pred6">pendiente</p>
+            <button id="btn-slideup">Boton</button>
+        </div>
+        <hr>
+        <h1>fadeIn</h1>
+        <div>
+            <p id="pred7">pendiente</p>
+            <button id="btn-append">Boton</button>
+        </div>
+        <h1>fadeOut</h1>
+        <div>
+            <p id="pred8">pendiente</p>
+            <button id="btn-red">Boton</button>
+        </div>
+        <hr>
+        <h1>before</h1>
+        <div>
+            <p id="pred9">Al presionar el boton agrega 'hello' antes</p>
+            <button id="btn-before">Boton</button>
+        </div>
+        <hr>
+        <h1>after</h1>
+        <div>
+            <p id="pred10">Al presionar el boton agrega 'hello' despues</p>
+            <br>
+            <button id="btn-after">Boton</button>
+        </div>
+        <hr>
+        <h1>html</h1>
+        <div>
+            <p id="pred11">Al presionar el boton agrega 'hello' al parrafo</p>
+            <button id="btn-html">Boton</button>
+        </div>
+        <hr>
+        <h1>attr</h1>
+        <form action="index.php">
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" placeholder="mail@uno.com">
+            <button id="btn-attr">Boton</button>
+        </form>
+        <hr>
+        <h1>val</h1>
+        <div>
+            <p id="pred13">Al presionar agregar valor:<input type="text" name="user"></p>
+            <button id="btn-val">Boton</button>
+        </div>
+        <hr>
+        <h1>text</h1>
+        <div>
+            <p id="pred14">Al presionar el boton agregar texto sobreescibiendo el  parrafo</p>
+            <button id="btn-text">Boton</button>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
@@ -74,7 +141,55 @@
                 $('#pred3').append('<li>Append</li>');
             }
         )
+        $('#btn-toggle').click(
+            function () {
+                $('#pred4').toggle();
+            }
+        )
+        $('#btn-before').click(
+            function () {
+                $('#pred9').before('hello');
+            }
+        )
+        $('#btn-after').click(
+            function () {
+                $('#pred10').after('hello');
+            }
+        )
+        $('#btn-html').click(
+            function () {
+                $('#pred11').html('hello');
+            }
+        )
+        $('#btn-attr').click(
+            function () {
+                $('#email').attr('placeholder')
+            }
+        )
+        $('#btn-val').click(
+            function () {
+                $("input:text").val('4');
+            }
+        )
+        $('#btn-text').click(
+            function () {
+                $('#pred14').text('texto');
+            }
+        )
     </script>
 </body>
 
 </html>
+
+<!---
+.toggle
+.slideDown
+.slideUp
+.fadeIn
+.fadeOut
+.before
+.after
+.html
+.attr
+.val
+.text-->
