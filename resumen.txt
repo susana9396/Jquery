@@ -4,7 +4,7 @@ $('h1 h4 li p').hide();  // esconde todos los tag nombrados
 
 $('h1 h4 li p').show(); // muestra despues de esconder
 
-$('p .sp').show();  // paragraf clase special está dentro de paragraf
+$('p .sp').show();  // paragraf clase sp está dentro de paragraf
 
    $('p .sp').show(); <p><div class='sp'></div></p>
 

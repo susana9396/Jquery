@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jquery Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            console.log('document id ready!');
+            $('h1').html('hello');
+            $('h1').click(function (){
+                console.log('h1 is clicked!!!')
+                $('p').toggle();
+            })
+        });
+    </script>
+</head>
+<body>
+
+    <h1>CodingDojo</h1>
+    <p>asf</p>
+    <p>akssjksskka</p>
+</body>
+
+</html>
