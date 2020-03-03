@@ -1,0 +1,92 @@
+$('h1').hide(); //esconde h1
+
+$('h1 h4 li p').hide();  // esconde todos los tag nombrados 
+
+$('h1 h4 li p').show(); // muestra despues de esconder
+
+$('p .sp').show();  // paragraf clase special está dentro de paragraf
+
+   $('p .sp').show(); <p><div class='sp'></div></p>
+
+$('p.sp').show(); <p class='sp'> // Sin el espacio la clase sp está en paragraf
+
+//Podemos agregar una clase
+
+$('h1').addClass('bg-primary'); // si agregramo esta clase h1 toma el color azul
+
+//Podemos remover la clase
+
+$('h1').removeClass('bg-primary');
+
+//Agregamos otra clase
+
+$('h1').addClass('bg-danger'); // toma color rojo
+
+// Podemos cambiar el texto de h1
+
+$('h1').text('Hello Dojo');
+
+// Podemos cambiar el texto de la lista
+
+$('li').text('Coding');
+
+// Podemos cambiar el texto con dos p
+
+$('li').html('<p>Coding</p><p>Dojo</p>'); // va alternando entre las palabras de la lista
+
+   si fuese..$('li').text('<p>Coding</p><p>Dojo</p>')// se veria <p>Coding</p><p>Dojo</p> en cada palabra de la lista
+
+$('h1').after('hello'); // agrega 'hello' depsues del texto que hay en h1
+
+//Se puede agregar despues
+
+$('h1').before(´Michael');
+
+
+$('h1').append(´Choi');// agrega la palabra en la misma linea del texto de h1
+
+$('h1').prepend(´Choi');// el texto se pone antes del texto de h1 en la misma linea
+
+/////id 
+
+//Podemos obtener un atributo 
+
+$('#email').attr('placeholder') // el atributo placeholder devuelve el correo del imput email
+
+"you@explampple.com"
+
+
+///Podemos usar una funcion
+
+$('h1').click( function() { } ); // La funcion se ejecutara cuando se hace click en h1
+
+  $('h1').click( function() { $('p').toggle(); } ); // AL hacer click en h1 se ejecuta la funcion, esta dice que se oculte paragraf (gracias a toggle)
+
+//Si usamos hide
+  $('li').click( function() { $('li').hide(); } ); // al hacer click en la lista se esconde toda la lista, pero para que se vuelva a mostrar se debe usar show
+
+  $('li').click( function() { $(this).addClass('btn btn-primary); } ); // al hacer click en la lista toma las propiedades de la clase 'btn btn-primary' que es un boton
+
+  $('h4').click( function() { $(this).hide( ); } ); // Con un click en h4 esconde h4
+
+// se puede imprimir los parent de li
+  $('li').click(funcion(){ console.log($(this).parent().parent());} );
+   [div.card-body, prevObject: ..  ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
