@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont{
+            margin:50px;
+            padding: 20px;
+            width: 500px;
+            border-style: solid;
+            border-color: black;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cont">
+        <h1>Add Class</h1>
+        <div>
+            <p id="pred">Al presionar el boton agrega la clase red a este parrafo</p>
+            <button id="btn-red">Boton</button>
+        </div>
+        <hr>
+        <h1>Slidetogglen</h1>
+        <div>
+            <p id="pred1">Al presionar el boton esconder/mostrar el parrafo</p>
+            <button id="btn-slide">Boton Slidetogglen</button>
+        </div>
+        <hr>
+        <h1>Hide//Show</h1>
+        <div>
+            <p id="pred2">Al presionar el boton esconder/mostrar el parrafo</p>
+            <button id="btn-hide">Boton Ocultar</button>
+            <button id="btn-show">Boton Mostrar</button>
+        </div>
+        <hr>
+        <h1>Append</h1>
+        <div>
+            <p id="pred3">Al presionar el boton agregar un nuevo parrafo</p>
+            <button id="btn-append">Boton</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#btn-red').click(
+            function () {
+                $('#pred').addClass('red');
+            }
+        )
+        $('#btn-hide').click(
+            function () {
+                $('#pred2').hide();
+            }
+        )
+        $('#btn-show').click(
+            function () {
+                $('#pred2').show();
+            }
+        )
+        $('#btn-slide').click(
+            function () {
+                $('#pred1').slideToggle();
+            }
+        )
+        $('#btn-append').click(
+            function () {
+                $('#pred3').append('<li>Append</li>');
+            }
+        )
+    </script>
+</body>
+
+</html>
