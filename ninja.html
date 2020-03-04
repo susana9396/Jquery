@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+        margin:0;
+        padding:0;
+        }
+        .tabla{
+            margin-left: 230px;
+            height: 405px;
+            width: 813px;
+            background-color:#16141428;
+        }
+        button{
+            margin-left: 600px;
+            display: block;
+            margin-top: 20px;
+            width: 100px;
+            height: 50px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="tabla">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+        <img src="images.jpg" alt="ninja" height="200" width="200">
+    </div>
+     <button class='boton'>Boton</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('img').click(
+            function () {
+                $(this).hide();
+            }
+        )
+        $('.boton').click(
+            function () {
+                $('img').show();
+            }
+        )
+    </script>
+</body>
+
+</html>
