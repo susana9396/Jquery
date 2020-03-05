@@ -12,7 +12,7 @@
         padding:0;
          }
         .tabla{
-            height: 410px;
+            height: 430px;
             width: 830px;
             background-color:#16141428;
             display: block;
@@ -22,15 +22,33 @@
              display: inline-block;
              vertical-align: top;
              text-align: center;
+             margin-top: 5px;
+             margin-left: 3px;
         
          }
-         p{
+         .caja{
             position: absolute;
-            top: 150px;
-            left: 60px;
+            top: 130px;
+            left: 10px;
             font-size: 20px;
-            color: white;
+            color: rgb(17, 16, 16);
+            background-color: darkslategrey;
+            font-size: 15px;
+            width: 150px;
+            outline-style: solid;
+            outline-color: red;
+            
          }
+         p{
+             font-size: 18px;   
+             
+         }
+         li{
+            list-style: none;
+            
+          
+         }
+       
     </style>
 </head>
 
@@ -38,55 +56,114 @@
     <div class="tabla">
        <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+                
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         <div class="imagen">
             <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
-            <p>descripcion</p>
+            <div class="caja"><p>Descripcion</p>
+                <ul>
+                    <li>Talla</li>
+                    <li>Color</li>
+                    <li>Tela</li>
+                </ul>
+            </div>
         </div>
         
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
         
-        $('.imagen').mouseover(function() {
-            $( "p", this ).first().text( "mouse over" );
+        $('p').mouseover(function() {
+            $( 'ul' ).show();
+       
+      });
+      $('p').mouseout(function() {
+            $( 'ul' ).hide();
+       
+      });
+
+       $('img').mouseover(function() {
        
         const src = $(this).attr('src'); //acá se asigna a una constante src el src es decir ninja.img
        
         $(this).attr('src', $(this).attr('data-alt-src'));// si se hace click en src cambia a 'data-alt-src'
         $(this).attr('data-alt-src',src);// si se hace click en 'data-alt-src' cambia a 'src'
+       });
 
-        //o
-
-
-        //var data=$(this).attr('data-alt-src');
-        //$(this).attr('src',data);
-           
+       $('img').mouseout(function() {
+       
+        const src = $(this).attr('src'); //acá se asigna a una constante src el src es decir ninja.img
+       
+       $(this).attr('src', $(this).attr('data-alt-src'));// si se hace click en src cambia a 'data-alt-src'
+       $(this).attr('data-alt-src',src);// si se hace click en 'data-alt-src' cambia a 'src'
+      
        });
     </script>
 </body>
