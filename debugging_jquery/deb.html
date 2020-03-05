@@ -4,16 +4,16 @@
 	<link rel="stylesheet" type="text/css" href="debugging_jquery.css">
 	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 	<script type="text/javascript">
-	    $(document).ready(function () { // error, no esta esta linea// esto es necesario para que una vez se cree la pagína sepués se ejecute las funciones jquery
+	    $(document).ready(function () { // error, no esta esta linea// esto es necesario para que una vez se cree la pagína después se ejecute las funciones jquery
 			$('p, h3, li').hover(function(){ //error, no estaba funcion delimitado con parentesis
 				$(this).css('color', 'white');
 			}, function(){
 				$(this).css('color', 'black');
-			}) // se borra punto y coma
+			});
 
 			$('a').click(function(){
 				alert("we don't actually serve pizza...");
-			}) // se borra punto y coma
+			});
 
 			$('img').click(function(){
 				$(this).slideUp();
@@ -21,12 +21,12 @@
 
 			$('h5').click(function(){
 				$('img').slideDown(); // error, slideDown estaba separado
-			}) // se borra punto y coma
+			});
 
 			$('button').click(function(){
 				var result = $('input:checked').val()  //error se cambia value a val
 				alert("Thank you for your input, we like " + result + " too!");
-			}) 	// se borra punto y coma
+			});
         });	
 	</script>
 </head>
