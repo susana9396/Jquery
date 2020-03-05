@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+        margin:0;
+        padding:0;
+         }
+        .tabla{
+            height: 410px;
+            width: 830px;
+            background-color:#16141428;
+            display: block;
+        }
+         .imagen{
+             position: relative;
+             display: inline-block;
+             vertical-align: top;
+             text-align: center;
+        
+         }
+         p{
+            position: absolute;
+            top: 150px;
+            left: 60px;
+            font-size: 20px;
+            color: white;
+         }
+    </style>
+</head>
+
+<body>
+    <div class="tabla">
+       <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        <div class="imagen">
+            <img src="img1.jpg" data-alt-src='img2.jpg' width="200px" height="200px"/>
+            <p>descripcion</p>
+        </div>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        $('.imagen').mouseover(function() {
+            $( "p", this ).first().text( "mouse over" );
+       
+        const src = $(this).attr('src'); //acá se asigna a una constante src el src es decir ninja.img
+       
+        $(this).attr('src', $(this).attr('data-alt-src'));// si se hace click en src cambia a 'data-alt-src'
+        $(this).attr('data-alt-src',src);// si se hace click en 'data-alt-src' cambia a 'src'
+
+        //o
+
+
+        //var data=$(this).attr('data-alt-src');
+        //$(this).attr('src',data);
+           
+       });
+    </script>
+</body>
+
+</html>
