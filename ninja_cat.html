@@ -39,7 +39,7 @@
         $('img').click(function() {
         console.log('data-alt-src value is', $(this).attr('data-alt-src'));
         console.log($(this).data('alt-src'));
-        const src = $(this).attr('src'); //acá se asigna a una constante src el src es decir ninja.img
+        const src = $(this).attr('src'); //acá se asigna a una constante src el src es decir ninja.imgk
        
         $(this).attr('src', $(this).attr('data-alt-src'));// si se hace click en src cambia a 'data-alt-src'
         $(this).attr('data-alt-src',src);// si se hace click en 'data-alt-src' cambia a 'src'
