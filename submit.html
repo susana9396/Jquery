@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function(){
+                alert("estoy en la funcion")
+                return false
+            });
+            });
+      
+        
+    </script>
+</head>
+
+<body>
+    <form action="proces.php" method="get">
+            
+            <input type="text" name="name" id="name" placeholder="name"><br>
+            <input type="email" name="email" id="email" placeholder="email"><br>
+            <input type="reset">
+            <button>Enviar</button>
+    </form>
+    
+    
+</body>
+
+</html>
